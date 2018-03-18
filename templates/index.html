@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i" rel="stylesheet">
+  <link href="./resources/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i" rel="stylesheet">
+
+<img id="header" src='./resources/logoheader.svg' title='test2' />
+
+<div id="content">
+<p id="timeupdated">conditions forecasted at</p><h1><a class="current-area" href="#top">all pnw resorts</a></h1><span id="timeupdated">as of {{(index (index . 0).Areas 0).TimeUpdated}}</span>
+
+<table class = "forecastdays">
+  <tr>
+       <th />
+      {{range (index (index . 0).Areas 0).Periods}}
+        <th>{{.Name}}</th>
+      {{end}}
+    </tr>
+</table>
+<div class="forecast">
+ <table class = "forecasttable">
+    {{range .}}
+    <tr>
+      <td><p class="forecasttitle"><a class="parent-area" href="/">pnw</a> / <a class="current-area" href="#{{.Name}}" id="#{{.Name}}">{{.Name}}</a></p></td>
+      {{range (index .Areas 0).Periods}}
+        <td>{{.Weather}}, {{.Temperature}} °F<br>{{if .Snow}}<span class="snow">{{.Snow}}</span>{{else}}<span class="no-snow">no snow :(</span>{{end}}</td>
+      {{end}}
+    </tr>
+    {{end}}
+</table>
+</div>
+
+<div class="footer">Snow forecasts courtesy of NOAA. Ski at your own risk. Site design by Oliver Hopcroft</div></div>
+  </body>
+</html>

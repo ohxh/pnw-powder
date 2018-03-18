@@ -1,0 +1,34 @@
+[{
+	"name": "alpental",
+	"areas": [{
+		"name": "top",
+		"url": "https://api.weather.gov/gridpoints/SEW/150,54/forecast"
+	}, {
+		"name": "bottom",
+		"url": "https://api.weather.gov/gridpoints/SEW/151,53/forecast"
+	}]
+}, {
+	"name": "crystal",
+	"areas": [{
+		"name": "main",
+		"url": "https://api.weather.gov/gridpoints/SEW/144,30/forecast"
+	}]
+}, {
+	"name": "baker",
+	"areas": [{
+		"name": "main",
+		"url": "https://api.weather.gov/gridpoints/SEW/157,119/forecast"
+	}]
+}, {
+	"name": "white-pass",
+	"areas": [{
+		"name": "main",
+		"url": "https://api.weather.gov/gridpoints/PDT/55,158/forecast"
+	}]
+}, {
+	"name": "stevens",
+	"areas": [{
+		"name": "main",
+		"url": "https://api.weather.gov/gridpoints/OTX/25,115/forecast"
+	}]
+}]
